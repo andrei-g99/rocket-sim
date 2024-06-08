@@ -56,6 +56,7 @@ while t < t_max:
     if np.linalg.norm(p) < r_earth:
         break
 
+    # test gimbal movement
     if t < 50 and t > 45:
         gimbal_angle = 1
     else:
