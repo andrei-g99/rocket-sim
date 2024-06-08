@@ -46,6 +46,16 @@ else:
 ```
 
 ## Thrust force
+The thrust force is the direction of the rocket body orientation and depends on the fuel consumption rate and gas exhaust velocity.
+
+```python
+# Compute the thrust force
+if m_f > 0 and engine_active:
+     F_t = np.array([np.sin(alpha), np.cos(alpha)]) * (r_f * v_e)
+     F_t = rot_mat(gimbal_angle) @ F_t
+else:
+     F_t = np.array([0, 0])
+```
 
 # Gallery
 <img src="https://i.imgur.com/jhfVVsT.png" width="50%" height="50%" alt="alt text" title="sim">
