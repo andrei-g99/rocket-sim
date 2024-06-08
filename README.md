@@ -34,6 +34,17 @@ Where:
   - rho : air density at current altitude
   - |v|: velocity magnitude
 
+If the velocity is 0 the formula is skipped and drag force is also set to 0.
+```python
+# Compute the drag force
+abs_v = np.linalg.norm(v)
+if abs_v != 0:
+     normalized_vel = v / abs_v
+     F_d = -normalized_vel * drag_force(np.linalg.norm(p), abs_v)
+else:
+     F_d = np.array([0, 0])
+```
+
 ## Thrust force
 
 # Gallery
