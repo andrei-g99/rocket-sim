@@ -20,7 +20,19 @@ Where:
   - M_e : mass of Earth
   - **r** : position vector of the Rocket w.r.t. the origin
 
+```python
+# Gravitational force
+F_g = (- p * G * M_e * m)/(np.linalg.norm(p)**3)
+```
+
 ## Drag force
+The drag force is assumed to be a quadratic function of velocity, formulated as:
+$$\mathbf{F}_{d} = - \frac{1}{2} C_d \rho \| \mathbf{v} \|^2 \cdot \mathbf{\hat{v}}$$
+Where:
+  - **v hat** : normalized velocity vector
+  - C_d : drag coefficient
+  - rho : air density at current altitude
+  - |v|: velocity magnitude
 
 ## Thrust force
 
