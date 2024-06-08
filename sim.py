@@ -96,9 +96,6 @@ while t < t_max:
 
     m = m_0 + m_f
 
-    if t == 300:
-        print(f'a = {a}')
-
     # Store data
     time.append(t)
     positions.append(p)
